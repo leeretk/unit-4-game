@@ -31,7 +31,7 @@ $(document).ready(function () {
 
     //STEP 2 -- user guess:  Get the user's pick
 
-        $(".user-choice").on("click", function() {
+        $(".user-guess").on("click", function() {
             
            
            

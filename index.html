@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">]
 
   <!-- Added a link to css-->
-  <link rel="css" href="assets\css\style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
 
@@ -22,7 +22,18 @@
     <h1 class="text-center">Crystals</h1>
     <div class="text-center">
 
-      <div id="#chosenNumber">Match to this number: </div>
+      <div id="chosenNumber"> </div>
+      <p>Match to this number:</p>
+      <p>Guess Again</p>
+      <ul class="myTotals li">
+        <li>Wins: </li>
+        <li>Losses: </li>
+        <li>Guesses Left: </li>
+        <li>Your Guesses so far: </li>
+
+      </ul>
+      
+      
 
       <!-- Here we have our buttons for the Crystals -->
       <button type="button" id="btn1" class="btn btn-primary btn-sm activ user-guess" ><img src="assets\img\diamond.jpeg" alt="diamond"><h3>Diamonds </h3></button>
@@ -37,10 +48,7 @@
 
       <button id="startGameButton" class="tn btn-secondary btn-lg active start-game"><h3>Start Game</h3></button>
 
-      <p>Wins:</p>
-      <p>Losses:</p>
-      <p>Guesses Left:</p>
-      <p>Your Guesses so far:</p>
+
 
   <script src="assets\javascript\game.js"></script>
       

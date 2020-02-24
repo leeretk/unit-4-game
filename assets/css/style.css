@@ -1,28 +1,27 @@
 /************ IMAGES ******************/
 img {
-  width: 50px;
-  height: 50px;
+  width: 200px;
+  height: 200px;
 }
 
 /************ HEADINGS ******************/
 
 header {  
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color: #7f0909;
-  color: #ffc500;
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
   }
 
-h1, h2, h3 {
+
+h2, h3 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 10px 0;
-  background-color: #7f0909;
-  color: #ffc500;
+  color: white;
 }
 
 h1 {
+  color: blue;
   font-size: 100px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -35,111 +34,35 @@ h2 {
 p {
   font-size: 1.6em;
   font-weight: normal;
-  color: white;
+  color: blue;
 }
 
-.category-p {
-  font-size: 50px;
-  font-weight: normal;
-  font-weight: lighter;
-  color: white;
-}
-
-/************ CONTAINERS ******************/
-
-.alphabetNotice {
-  background-color: #ffc500;
-  color: #7f0909;
-  font-size: 40px;
-  font-weight: normal;
-  text-align: center;
-  }
-
-body {
-  background: #7f0909;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color:#ffc500 ;
-  height: 100%;
-  text-align: center;
-  font-size: 18px;
-}
-
-.buttonContainer { padding-top: 20px;
-}
-
-.wrapper {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.wrapper:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-canvas {
-  color: #fff;
-  border: #fff dashed 2px;
-  padding: 15px;
-}
 
 /************BUTTON DEFINITIONS ******************/
-
-button {
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  -khtml-border-radius: 5px;
-  background: #ffc500;
-  color:black;
-  border: solid 2px #fff;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 30px;
-  padding: 25px 12px;
-  width: 200px;
-  margin: 10px;
-  outline: none;
-}
 
 button:hover {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background: grey;
-  border: solid 1px #fff;
-  color: #ffc500 ;
-}
+  background: white;
+ }
 
 /************ MY COUNTS ******************/
-
-.mylives {
-  font-size: 40px;
-  text-align: center;
-  display: inline-block;
-  }
-
-.clueFormat {
-  font-size: 50px;
-    font-weight: normal;
-    color: white;
-    background-color: ffc500;
-    }
-
-.myWins {
-  font-size: 50px;
+.myTotals li {
+  list-style: none;
+  font-size: 20px;
   text-align: center;
   display: inline-block;
   padding: 10px;
+  background-color: gray;
 }
 
-.myLosses {
-  font-size: 50PX;
-  text-align: center;
-  display: inline-block;
-  padding: 10px;
+@media (max-width: 200px) {
+  .myTotals li {
+  padding: 0 0 0 25px;
 }
 
-
-
+@media (max-width: 960px) {
+  .body {
+  padding: 0 0 0 25px;
+}
