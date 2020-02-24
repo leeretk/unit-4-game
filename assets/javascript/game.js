@@ -18,20 +18,28 @@ var guessCounter;       //count guesses
 $(document).ready(function () {
 
     //STEP 1 -- start game:  Trigger Event (ON CLICK) SELECT RANDOM NUMBER 
+    $(".start-game").on("click", function () {
 
-    $("#startGameButton").on("click", function () {
+            var chosenNumber = "";  //string to hold random number
 
-        var chosenNumber = "";  //string to hold random number
-
-        for (var i = 0; i < 9; i++) {                           // initiate a loop to generate random numbers between 0 and 9.
-            var random = Math.floor((Math.random() * 10));
-
-            chosenNumber = random + chosenNumber;
-            console.log(chosenNumber)
+            for (var i = 0; i < 9; i++) {                           // initiate a loop to generate random numbers between 0 and 9.
+                var random = Math.floor((Math.random() * 10));
+                chosenNumber = random + chosenNumber;
+                console.log(chosenNumber);
         };//end of random number
+    });//end of ChosenNumber
 
-    }//end of on click function
+    //STEP 2 -- user guess:  Get the user's pick
 
-};//end of function 
+        $(".user-choice").on("click", function() {
+            
+           
+           
+             ​console.log("You clicked a button!!");
+    });
+    
+
+
+});     //end of document 
 
 
