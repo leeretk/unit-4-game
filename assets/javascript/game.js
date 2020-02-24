@@ -18,7 +18,12 @@ var guessCounter;       //count guesses
 $(document).ready(function () {
 
     //STEP 1 -- start game:  Trigger Event (ON CLICK) SELECT RANDOM NUMBER 
+
+
     $(".start-game").on("click", function () {
+
+        $("#random-number").text(Math.floor(Math.random() * 1000) + 1);
+        $("#random-number").text(Math.floor(Math.random() * 1000) + 1);
 
             var chosenNumber = "";  //string to hold random number
 
@@ -29,6 +34,8 @@ $(document).ready(function () {
         };//end of random number
     });//end of ChosenNumber
 
+
+
     //STEP 2 -- user guess:  Get the user's pick
 
         $(".user-guess").on("click", function() {
@@ -38,8 +45,28 @@ $(document).ready(function () {
              ​console.log("You clicked a button!!");
     });
     
+    //STEP 3 -- add user guesses: get the user guess total
 
 
-});     //end of document 
+
+
+    //STEP 4 -- compare user guess total to random number
+
+
+
+
+    //STEP 5 -- If Win
+
+
+
+    //STEP 6 -- If Lose
+
+
+
+
+
+
+
+});     //end of script
 
 
