@@ -20,6 +20,13 @@ var playerGuess = [];   // player guess when they click a crystal
 var guessHolder;        //
 var playerGuessTotal;   // add all guesses to get total score
 
+var counter = 0;
+  $(".crystal-image").on("click", function() {
+    counter += 1;
+    alert("You clicked this crystal " + counter + " times!");
+    });
+
+
 //------------------------------------------------------------------------------------------//
 
 //ensure the code doesn't run until the HTML is finished loading:
@@ -44,16 +51,16 @@ $(document).ready(function () {
     //add code here to limit the number of games to 3.  
 
 //------------------------------------------------------------------------------------------//    
-    //STEP 2 -- user guess:  
-        //-- on click event to generate users pick 
+    //STEP 2 -- plaer guess:  
+        //-- on click event to generate player pick 
         //-- click btn1, 2, 3, 4
         //-- connect btn to image
-        //-- when user clicks button 
+        //-- when player clicks button 
             //-generate random number
             //-log random number to guessHolder
             //-log guess results
                     //player guess = randomNumber --> you win!
-                    //player guess <= randomeNumber --> guess again!
+                    //player guess <= randomNumber --> guess again!
                        
                         //on click of 2nd btn
                             //IF.... player guess = randomNumber --> you win!    
@@ -65,73 +72,60 @@ $(document).ready(function () {
                         //on click of 4rd btn
                             //IF.... player guess <= randomeNumber --> guess again!
                             //ELSE...player guess = randomNumber --> you win!  
+                //-log game results
+                    //IF .... gameoutcome = "win" 
+                        //add wins 
+                    //ELSE... gameoutcome = "lose" 
+                        //add losses
 
-
-    if (playerGuess === randomNumber)  //button 1
-
-
-
-        $("#player-total").on("click", function () {
-
+    if (playerGuess === randomNumber)  {
+    
         //button 1
         $("#btn1").text(Math.floor(Math.random() * 10));
         var playerGuess = "";  //string to hold random number
 
-        $("#random-number").text(Math.floor(Math.random() * 100)); {     
+        $("#guess1").text(Math.floor(Math.random() * 100)); {     
             var randomNumber = Math.floor(Math.random() * 100); 
             console.log(randomNumber);
-            }; //end of random number
+        }; //end of random number
 
+        $("#player-total").on("click", function () {
+            playerGuessTotal = bt1+bt2+btn3+btn4
+        }
+           
+        else if { 
 
-     else if { //button 2
+                //button 2
+                $("#btn2").text(Math.floor(Math.random() * 10));
+                var playerGuess = "";  //string to hold random number
 
-        $("#btn2").text(Math.floor(Math.random() * 10));
-        var playerGuess = "";  //string to hold random number
+                $("#guess2").text(Math.floor(Math.random() * 100)); {     
+                    var randomNumber = Math.floor(Math.random() * 100); 
+                    console.log(randomNumber);
+                }; //end of random number
 
-        $("#random-number").text(Math.floor(Math.random() * 100)); {     
-            var randomNumber = Math.floor(Math.random() * 100); 
-            console.log(randomNumber);
-            }; //end of random number
-
-            playerTotal = random + playerGuess;
-            console.log("player guess " + playerGuess);
-
-
+                $("#player-total").on("click", function () {
+                    playerGuessTotal = bt1+bt2+btn3+btn4
             }
 
-    else if {
+                    else if {
 
-        $("#btn3").text(Math.floor(Math.random() * 10));
-        var playerGuess = "";  //string to hold random number
+                        $("#btn4").text(Math.floor(Math.random() * 10));
+                        var playerGuess = "";  //string to hold random number
 
-        for (var i = 0; i < 9; i++) {                           // initiate a loop to generate random numbers between 0 and 99.
-            var random = Math.floor(Math.random() * 10);
-            playerTotal = random + playerGuess;
-            console.log("player guess " + playerGuess);
-        };//end of random number
+                        $("#guess4").text(Math.floor(Math.random() * 100)); {     
+                            var randomNumber = Math.floor(Math.random() * 100); 
+                            console.log(randomNumber);
+                        }; //end of random number
 
-    }    
+                        $("#player-total").on("click", function () {
+                            playerGuessTotal = bt1+bt2+btn3+btn4
+                    };
+                };
 
-    else {
-        $("#btn4").text(Math.floor(Math.random() * 10));
-        var playerGuess = "";  //string to hold random number
+ 
 
-        for (var i = 0; i < 9; i++) {                           // initiate a loop to generate random numbers between 0 and 99.
-            var random = Math.floor(Math.random() * 10);
-
-            playerTotal = random + playerGuess;
-            console.log("player guess " + playerGuess);
-        };//end of random number
-
-    }
-
-
-    });//end of ChosenNumber
-
-
-
-
-    //  $(".user-guess").on("click", function() {
+//  $(".player-guess").on("click", function() {
 
 
     //     ​console.log("You clicked a button!!");
@@ -143,15 +137,16 @@ $(document).ready(function () {
     // Game()
     //}
 
-    //  keep an array of previous guesses and check ea guess against what the user has alerady guessed
+    //  keep an array of previous guesses and check ea guess against what the player has alerady guessed
 
-    //STEP 3 -- add user guesses: get the user guess total
+    //STEP 3 -- add player guesses: get the player guess total
 
-    //STEP 4 -- compare user guess total to random number
+    //STEP 4 -- compare player guess total to random number
 
     //STEP 5 -- If Win
 
     //STEP 6 -- If Lose
+
 });//end of script
 
 
