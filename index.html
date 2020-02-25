@@ -8,7 +8,7 @@
 
   <!-- Added link to the jQuery Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  
+
   <!-- Added a link to Bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">]
 
@@ -21,41 +21,53 @@
   <div class="jumbotron">
     <h1 class="text-center">Crystals</h1>
     <div class="text-center">
-
-      <div id="chosenNumber"> </div>
       <p>Match to this number:</p>
+          <h1 class="text-center" id="random-number"></h1>
       <p>Guess Again</p>
-      <ul class="myTotals li">
-        <li class="card">Wins: </li>
-        <li class="card">Losses: </li>
-        <li class="card">Guesses Left: </li>
-        <li class="card">Your Guesses so far: </li>
-      </ul>           
 
-      <!-- Here we have our buttons for the Crystals -->
-      <button type="button" id="btn1" class="btn btn-primary btn-sm activ user-guess" ><img src="assets\img\diamond.jpeg" alt="diamond"><h3>Diamonds </h3></button>
-      <button type="button" id="btn2" class="btn btn-primary btn-sm activ user-guess"><img src="assets\img\ruby.jpeg" alt="diamond"><h3>Rubies </h3></button>
-      <button type="button" id="btn3" class="btn btn-primary btn-sm activ user-guess"><img src="assets\img\amethyst.jpeg" alt="diamond"><h3>Amethyst  </h3></button>
-      <button type="button" id="btn4" class="btn btn-primary btn-sm activ user-guess"><img src="assets\img\saphire.jpeg" alt="diamond"><h3>Saphires</h3></button>
+        <!-- GAME TOTALS -->
+        <ul class="myTotals li">
+            <li class="card">Wins: </li>
+            <li class="card">Losses: </li>
+            <li class="card">Guesses Left: </li>
+            <li class="card">Your Guesses so far: </li>
+          </ul>
+
+      <!-- GAME BUTTONS -->
+
+      <button type="button" id="btn1" class="btn btn-primary btn-sm activ user-guess"><img src="assets\img\diamond.jpeg"
+          alt="diamond">
+        <h3>Diamonds </h3>
+      </button>
+      <button type="button" id="btn2" class="btn btn-primary btn-sm activ user-guess"><img src="assets\img\ruby.jpeg"
+          alt="diamond">
+        <h3>Rubies </h3>
+      </button>
+      <button type="button" id="btn3" class="btn btn-primary btn-sm activ user-guess"><img
+          src="assets\img\amethyst.jpeg" alt="diamond">
+        <h3>Amethyst </h3>
+      </button>
+      <button type="button" id="btn4" class="btn btn-primary btn-sm activ user-guess"><img src="assets\img\saphire.jpeg"
+          alt="diamond">
+        <h3>Saphires</h3>
+      </button>
 
       <div class="text-center">
         ​
-              <!-- Here we have our button for generating random numbers (#random-button) -->
-              <button id="random-button" class="btn btn-primary btn-lg"><h1><span class="fa fa-question"></span></h1></button>
-              
-            </div>
-        <!-- Here we have div called "random-number" where our random number will go -->
-  <h1 class="text-center" id="random-number"></h1>
+
+      </div>
+
 
       <br>
       <br>
-
+ <!-- START GAME & GENERATE RANDOM NUMBERS -->
       <div class="#startGame">Click here to start game</div>
+      <button id="startGameButton" class="tn btn-secondary btn-lg active start-game">
+        <h3>Start Game</h3>
+      </button>
 
-      <button id="startGameButton" class="tn btn-secondary btn-lg active start-game"><h3>Start Game</h3></button>
+    <script src="assets/javascript/game.js"></script>
 
-  <script src="assets\javascript\game.js"></script>
-      
 </body>
 
 </html>

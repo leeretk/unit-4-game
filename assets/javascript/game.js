@@ -14,7 +14,6 @@ var gamesLost;          //adds all games lost until reload
 var gameCounter;        //count games played
 var guessCounter;       //count guesses
 
-
 $(document).ready(function () {
 
     //STEP 1 -- start game:  Trigger Event (ON CLICK) SELECT RANDOM NUMBER 
@@ -22,51 +21,44 @@ $(document).ready(function () {
 
     $(".start-game").on("click", function () {
 
-        $("#random-number").text(Math.floor(Math.random() * 1000) + 1);
-        $("#random-number").text(Math.floor(Math.random() * 1000) + 1);
-
+        $("#random-number").text(Math.floor(Math.random() * 100));
             var chosenNumber = "";  //string to hold random number
-
             for (var i = 0; i < 9; i++) {                           // initiate a loop to generate random numbers between 0 and 9.
-                var random = Math.floor((Math.random() * 10));
+                var random = Math.floor((Math.random() * 100));
                 chosenNumber = random + chosenNumber;
-                console.log(chosenNumber);
+                console.log(random);
+        };//end of random number
+    });//end of ChosenNumber
+
+    //STEP 2 -- user guess:  Get the user's pick
+
+    $(".player-total").on("click", function () {
+
+        $("#player-guess").text(Math.floor(Math.random() * 100));
+            var playerGuess = "";  //string to hold random number
+            for (var i = 0; i < 9; i++) {                           // initiate a loop to generate random numbers between 0 and 9.
+                var random = Math.floor(Math.random() * 100);
+                playerTotal = random + playerGuess;
+                console.log(random);
+                console.log(playerGuess);
         };//end of random number
     });//end of ChosenNumber
 
 
-
-    //STEP 2 -- user guess:  Get the user's pick
-
-        $(".user-guess").on("click", function() {
-            
+      //  $(".user-guess").on("click", function() {
+                   
            
-           
-             ​console.log("You clicked a button!!");
-    });
+        //     ​console.log("You clicked a button!!");
+    
     
     //STEP 3 -- add user guesses: get the user guess total
 
-
-
-
     //STEP 4 -- compare user guess total to random number
-
-
-
 
     //STEP 5 -- If Win
 
-
-
     //STEP 6 -- If Lose
+});//end of script
 
-
-
-
-
-
-
-});     //end of script
 
 
