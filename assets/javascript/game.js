@@ -7,8 +7,8 @@ var playerGuessTotal;   // add all guesses to get total score
 
 var win;                //when total guess score matches the random number.
 var lose;               //when total guess score does not match the random number.
-var gamesWon;           //adds all games won until reload
-var gamesLost;          //adds all games lost until reload
+var gamesWon =0;           //adds all games won until reload
+var gamesLost =0;          //adds all games lost until reload
 var gameCounter;        //count games played
 var guessCounter;       //count guesses
 
