@@ -4,8 +4,8 @@
 
 //-------------------------------------------------------------------------//
 
-
 var randomNumber 
+var playerGuess
 
 //ensure the code doesn't run until the HTML is finished loading:
 
@@ -17,21 +17,23 @@ $(document).ready(function () {
             //-- add random-number generator function
             //-- log results for random number
             //-- log results for game count
-    
+ 
     $("#start-game").on("click", function () {
 
-        $("#random-number").text {
+        $("#random-number").on("click", function() {
             var randomNumber = Math.floor(Math.random() * 100) + 1;
             console.log("Match to this Number: " + randomNumber)
             alert("random number is " + randomNumber)
-          };//end of random number
+          });//end of random number
     });//end of Number to Guess
      
  //-------------------------------------------------------------------------//    
     //add code here to limit the number of games to 3.  
+ 
+
 
  //-------------------------------------------------------------------------//   
-     //STEP 2 -- plaer guess:  
+     //STEP 2 -- player guess:  
         //-- on click event to generate player pick
 
 //    $("#player-guess").on("click", function() {

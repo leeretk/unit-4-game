@@ -1,5 +1,25 @@
 scratchpad
 
+
+//Game Outcome Variables 
+var gameOutcomes = ["win", "lose"]
+var win = 0;                //when total guess score matches the random number.
+var lose = 0;               //when total guess score does not match the random number.
+var gameOutcomeHolder;      //collects all wins and loses until reload
+
+//Guess Outcome Variables
+var gameGuesses = ["correct", "incorrect"]
+var playerGuess = [];   // player guess when they click a crystal
+var guessHolder;        //
+var playerGuessTotal;   // add all guesses to get total score
+
+//Games Variables
+var gameCounter=3;        //count games played
+
+//Guess Variables 
+var guessCounter = 4;       //count guesses
+
+
 $(".start-game").on("click", function () {
 
     $("#random-number").text(Math.floor(Math.random() * 10));
@@ -71,3 +91,21 @@ $(".player-total").on("click", function () {
                                     playerGuessTotal = bt1+bt2+btn3+btn4
                             };
                         };          
+
+                        $(".crystal-image").on("click", function() {
+                            alert("You clicked a crystal!")
+            
+            
+                    } )
+
+
+                    $("<button>").on("click", function() {
+                        $("#random-number").on("click", function() {
+                            var playerGuess = Math.floor(Math.random() * 100) + 1;
+                            console.log("Match to this Number: " + playerGuess)
+                            alert("random number is " + playerGuess)
+                          });//end of random number
+                    }  
+                    ); 
+                
+                
