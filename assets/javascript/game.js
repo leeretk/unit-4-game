@@ -78,6 +78,19 @@ $("#guessValueTotal"), function () {
     alert("Your new Value is " + guessValueTotal);
     var guessValueTotal = (diamond + ruby + amethyst + saphire);
     console.log("Guess Value Total " + guessValueTotal);
+
+    if (diamond) {
+        guessValueTotal = guessValue + diamond
+    }
+    else if (ruby) {
+        guessValueTotal = guessValue + ruby
+    }
+    else if (amethyst) {
+        guessValueTotal = guessValue + ruby
+    }
+    else if (saphire) {
+        guessValueTotal = guessValue + ruby
+    }
 }
 
 //-------------------------------------------------------------------------//   
