@@ -14,7 +14,14 @@ header {
     }
 
 
-h2, h3 {
+h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 10px 0;
+  color: white;
+  background-color: lightblue;
+} 
+
+h3 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 10px 0;
   color: white;
