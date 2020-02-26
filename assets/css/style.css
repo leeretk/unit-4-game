@@ -41,8 +41,7 @@ p {
 
 /************BUTTON DEFINITIONS ******************/
 button {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 10px;
 }
 
 button:hover {
@@ -69,6 +68,11 @@ button:hover {
 
 @media (max-width: 991.98px) {
   .body {
+  padding: 0 0 0 25px;}
+};
+
+@media (max-width: 991.98px) {
+  .head {
   padding: 0 0 0 25px;}
 };
 

@@ -23,3 +23,51 @@ $(".player-total").on("click", function () {
 
             playerTotal = random + playerGuess;
             console.log(playerGuess);
+
+
+
+  
+            if (playerGuess === randomNumber)  {
+    
+                //button 1
+                $("#btn1").text(Math.floor(Math.random() * 10));
+                var playerGuess = "";  //string to hold random number
+        
+                $("#guess1").text(Math.floor(Math.random() * 100)); {     
+                    var randomNumber = Math.floor(Math.random() * 100); 
+                    console.log(randomNumber);
+                }; //end of random number
+        
+                $("#player-total").on("click", function () {
+                    playerGuessTotal = bt1+bt2+btn3+btn4
+                }
+                   
+                else if { 
+        
+                        //button 2
+                        $("#btn2").text(Math.floor(Math.random() * 10));
+                        var playerGuess = "";  //string to hold random number
+        
+                        $("#guess2").text(Math.floor(Math.random() * 100)); {     
+                            var randomNumber = Math.floor(Math.random() * 100); 
+                            console.log(randomNumber);
+                        }; //end of random number
+        
+                        $("#player-total").on("click", function () {
+                            playerGuessTotal = bt1+bt2+btn3+btn4
+                    }
+        
+                            else if {
+        
+                                $("#btn4").text(Math.floor(Math.random() * 10));
+                                var playerGuess = "";  //string to hold random number
+        
+                                $("#guess4").text(Math.floor(Math.random() * 100)); {     
+                                    var randomNumber = Math.floor(Math.random() * 100); 
+                                    console.log(randomNumber);
+                                }; //end of random number
+        
+                                $("#player-total").on("click", function () {
+                                    playerGuessTotal = bt1+bt2+btn3+btn4
+                            };
+                        };          
