@@ -15,21 +15,29 @@ $(document).ready(function () {
     var amethyst = Math.floor(Math.random() * 24+1) 
     var saphire = Math.floor(Math.random() * 24+1) 
 
-    //setup variable for score
+    //setup variable for scoring
     var games = 0;
     var wins = 0;
     var losses = 0;
     var guesses = 0;
     var guessValue = 0; 
+    var diamond = 0;
+    var ruby = 0;
+    var amethyst = 0;
+    var saphire = 0;
 
     //set variables to collect totals    
     $("#win").text(wins);
     $("#lose").text(losses);
-    $("#gameTotal").text(games);
+    $("#gamesPlayed").text(games);
     $("#numberChosen").text(randomNumber);
-    $("#guessTotal").text(guesses);
+    $("#totalGuesses").text(guesses);
+    $("#diamondValue").text(diamond);
+    $("#rubyValue").text(ruby);
+    $("#amethystValue").text(amethyst);
+    $("#saphireValue").text(saphire);
     $("#guessValueTotal").text(guessValue);
- //-------------------------------------------------------------------------//
+  //-------------------------------------------------------------------------//
     //STEP 1 -- start game:  Trigger Event (ON CLICK) REST the Game 
         //-- create start game onclick function 
             //-- add random-number generator function
@@ -46,51 +54,83 @@ $(document).ready(function () {
         
           });//end of random number
     });//end of Number to Guess
-     
 
-    $("#win").text(wins), function() {
+ //-------------------------------------------------------------------------//      
+    //STEP 2 -- create functions for wins, losses, Guess Totals
+
+    $("#win"), function() {
         alert("You Win!");
         wins++;
+        console.log("wins " + wins)
     } 
 
-    $("#lose").text(losses), function() {
+    $("#lose"), function() {
         alert("You Lose!");
         losses++;
+        console.log("loses " + losses)
     } 
 
-
+    $("#guessValueTotal"), function() {
+        alert("Your new Value is " + guessValueTotal);
+        guessValueTotal = (diamond + ruby + amethyst + saphire);      
+        console.log("Guess Value Total " + guessValueTotal);
+    }
 
  //-------------------------------------------------------------------------//   
-     //STEP 2 -- player guesses:  
+     //STEP 3 -- player guesses:  
         //-- on click event to generate player pick
        
-    $("diamonds").on("click", function() {
-        var diamond = Math.floor(Math.random() * 24+1);
-        console.log("diamond guess " + diamond);
-        
-        $("#guessValueTotal").text(guessValue) {
-            guessValueTotal = (guessValue + diamond); 
-            console.log("Guess Value Total " + guessValueTotal);            
-            };
-      
+    $("#diamonds").on("click", function rest() {
+            var diamond = Math.floor(Math.random() * 25+1);
+            console.log("Guess is:" + diamond);
+            diamond++;
+            $("#diamondValue").text(diamond);
+       
+            //include wins and loses
+                if (diamond == numberChosen) {
+                          win();
+                 }
+                else if (diamond == numberChosen) {
+                         lose(); 
+                 }
+                 guessValueTotal();
 
-        guesses++;
-        guessTotal = (guessTotal + guesses);
-        console.log("Guess Total " + guessTotal);
-            
+       });//end of diamond function
+
+       $("#rubies").on("click", function rest() {
+        var ruby = Math.floor(Math.random() * 25+1);
+        console.log("Guess is:" + ruby);
+        ruby++;
+        $("#rubyValue").text(ruby);
+   
         //include wins and loses
-            for (diamond == randomNumber) {
-                    win();
-            }
-            else if (diamond) {
-                lose(); 
-            }
-        });
+            if (ruby == numberChosen) {
+                      win();
+             }
+            else if (ruby == numberChosen) {
+                     lose(); 
+             }
+             guessValueTotal();
 
-});
+        });//end of ruby function
     
-     
+        $("#amethysts").on("click", function rest() {
+            var amethyst = Math.floor(Math.random() * 25+1);
+            console.log("Guess is:" + amethyst);
+            ruby++;
+            $("#amethystValue").text(amethyst);
+       
+            //include wins and loses
+                if (amethyst == numberChosen) {
+                          win();
+                 }
+                else if (amethyst == numberChosen) {
+                         lose(); 
+                 }
+                 guessValueTotal();
     
+            });//end of ruby function
+
 
 
    //  $("#guess1").text(Math.floor(Math.random() * 100)); {     
