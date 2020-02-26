@@ -1,38 +1,30 @@
 //CRYSTALS GAME
 //------------------------------------------------------------------------------------------//    
 
-//Games Variables
-var gameCounter=3;        //count games played
-
 //Game Outcome Variables 
 var gameOutcomes = ["win", "lose"]
 var win = 0;                //when total guess score matches the random number.
 var lose = 0;               //when total guess score does not match the random number.
 var gameOutcomeHolder;      //collects all wins and loses until reload
 
-//Guess Variables 
-var guessCounter = 4;       //count guesses
-
 //Guess Outcome Variables
-
 var gameGuesses = ["correct", "incorrect"]
 var playerGuess = [];   // player guess when they click a crystal
 var guessHolder;        //
 var playerGuessTotal;   // add all guesses to get total score
 
-var counter = 0;
-  $(".crystal-image").on("click", function() {
-    counter += 1;
-    alert("You clicked this crystal " + counter + " times!");
-    });
+//Games Variables
+var gameCounter=3;        //count games played
 
+//Guess Variables 
+var guessCounter = 4;       //count guesses
 
 //------------------------------------------------------------------------------------------//
+    //ensure the code doesn't run until the HTML is finished loading:
 
-//ensure the code doesn't run until the HTML is finished loading:
 $(document).ready(function () {                     
 
-//------------------------------------------------------------------------------------------//    
+ //-----------------------------------------------------------------------------------------//
     //STEP 1 -- start game:  Trigger Event (ON CLICK) SELECT RANDOM NUMBER 
         //-- create start game onclick function 
             //-- add random-number generator function
@@ -47,12 +39,12 @@ $(document).ready(function () {
         console.log("game count " + gameCounter++);
         }; //end of random number
     });//end of ChosenNumber
-//------------------------------------------------------------------------------------------//    
+ //----------------------------------------------------------------------------------------//    
     //add code here to limit the number of games to 3.  
 
-//------------------------------------------------------------------------------------------//    
+ //--------------------------------------------------------------------------------------//    
     //STEP 2 -- plaer guess:  
-        //-- on click event to generate player pick 
+        //-- on click event to generate player pick
         //-- click btn1, 2, 3, 4
         //-- connect btn to image
         //-- when player clicks button 
@@ -123,8 +115,9 @@ $(document).ready(function () {
                     };
                 };
 
- 
+  
 
+                  
 //  $(".player-guess").on("click", function() {
 
 
