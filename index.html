@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Crystal Game</title>
-
   <!-- Added a link to Bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">]
   <!-- Added a link to css-->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 </head>
 
-  <!-- CLASS (BOOSTRAP and ) vs. ID --> 
+<!-- CLASS (BOOSTRAP and ) vs. ID -->
 
 <header>
+
   <!-- HEADER -->
   <div class="jumbotron">
     <h1 class="text-center">Crystals</h1>
   </div>
-  <!-- RANDOM NUMBER -->
-  <div>
-    <h2 class="text-center" id="random-number">Number to Guess:</h2>
-  </div>
+
 
   <!-- GAME TOTALS -->
   </div>
@@ -32,40 +28,46 @@
     <li class="card">Losses: </li>
     <li class="card">Guesses Left: </li>
     <li class="card">Your Guesses so far: </li>
+    <li class="card" id="gameTotal">Games Played:</li>
   </ul>
   </div>
 </header>
 
 <body class="text-center">
+  <!-- RANDOM NUMBER -->
+  <div>
+    <h2>Number to Guess:</h2>
+    <p id="numberChosen"></p>
+  </div>
   <!-- GAME BUTTONS -->
-  <button type="button" class="btn btn-primary btn-sm activ">
+  <button type="button" id="diamonds" class="btn btn-primary btn-sm activ">
     <img src="assets\img\diamond.jpeg" alt="diamond">
     <h3>Diamonds </h3>
   </button>
 
-  <button type="button" class="btn btn-primary btn-sm activ">
+  <button type="button" id="buttons" class="btn btn-primary btn-sm activ">
     <img src="assets\img\ruby.jpeg" alt="diamond ">
     <h3>Rubies </h3>
   </button>
 
-  <button type="button" class="btn btn-primary btn-sm activ ">
+  <button type="button" id="buttons" class="btn btn-primary btn-sm activ ">
     <img src="assets\img\amethyst.jpeg" alt="diamond">
     <h3>Amethyst </h3>
   </button>
 
-  <button type="button" class="btn btn-primary btn-sm activ">
+  <button type="button" id="buttons" class="btn btn-primary btn-sm activ">
     <img src="assets\img\saphire.jpeg" alt="diamond">
     <h3>Saphires</h3>
   </button>
 
- <!-- START GAME & GENERATE RANDOM NUMBERS -->
-  <div id="start-game">     Click here to start game </div>
+  <!-- START GAME & GENERATE RANDOM NUMBERS -->
+  <div class="text-center">
+    <button id="start-game" class="tn btn-secondary btn-lg active">
+      <h3>Start Game</h3>
+    </button>
+  </div>
+  <script type="text/javascript" src="assets/javascript/game.js"> </script>
 
-  <button id="random-button" class="tn btn-secondary btn-lg active">
-    <h3>Start Game</h3>
-  </button>
-
-  <script type="text/javascript" href="assets/javascript/game.js"> </script>
 
 </body>
 

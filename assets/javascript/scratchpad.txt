@@ -109,3 +109,35 @@ $(".player-total").on("click", function () {
                     ); 
                 
                 
+    var playerGuess = []
+
+     //button 1
+     $("#btn1").text(Math.floor(Math.random() * 10));
+        var button1 = "";  //string to hold random number
+
+        var guess = (this.innerHTML);
+            this.setAttribute("class", "active");
+            this.onclick = null;
+
+      for (var i = 0; i < word.length; i++) {
+        if (word[i] === guess) {
+          guesses[i].innerHTML = guess;
+          counter += 1;
+        };
+      }
+
+      var j = (word.indexOf(guess));
+      if (j === -1) {
+        lives -= 1;
+        showLives();
+        showWins();
+        showLosses();
+        animate();
+      } else {
+        showLives();
+        showWins();
+        showLosses();
+        console.log(lives)
+        console.log(wins)
+        console.log(losses)
+      }

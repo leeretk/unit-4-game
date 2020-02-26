@@ -1,45 +1,106 @@
 //CRYSTALS GAME
 
-//-------------------------------------------------------------------------//   
-
 //-------------------------------------------------------------------------//
-
-var randomNumber 
-var playerGuess
 
 //ensure the code doesn't run until the HTML is finished loading:
 
 $(document).ready(function () {                     
+    
+    //setup variable random number for between 25 and 100
+    var randomNumber = Math.floor(Math.random() * 25+75)
 
+    //setup variable random number for each crystal between 1 and 25
+    var diamond = Math.floor(Math.random() * 24+1) 
+    var ruby = Math.floor(Math.random() * 24+1) 
+    var amethyst = Math.floor(Math.random() * 24+1) 
+    var saphire = Math.floor(Math.random() * 24+1) 
+
+    //setup variable for score
+    var games = 0;
+    var wins = 0;
+    var losses = 0;
+    var guesses = 0;
+    var guessValue = 0; 
+
+    //set variables to collect totals    
+    $("#win").text(wins);
+    $("#lose").text(losses);
+    $("#gameTotal").text(games);
+    $("#numberChosen").text(randomNumber);
+    $("#guessTotal").text(guesses);
+    $("#guessValueTotal").text(guessValue);
  //-------------------------------------------------------------------------//
-    //STEP 1 -- start game:  Trigger Event (ON CLICK) SELECT RANDOM NUMBER 
+    //STEP 1 -- start game:  Trigger Event (ON CLICK) REST the Game 
         //-- create start game onclick function 
             //-- add random-number generator function
             //-- log results for random number
             //-- log results for game count
- 
-    $("#start-game").on("click", function () {
-
-        $("#random-number").on("click", function() {
-            var randomNumber = Math.floor(Math.random() * 100) + 1;
-            console.log("Match to this Number: " + randomNumber)
-            alert("random number is " + randomNumber)
+    
+    $("#start-game").on("click", function rest() {
+        randomNumber = Math.floor(Math.random() * 25+75);
+        console.log("Match to this number:" + randomNumber);
+        $("#numberChosen").text(randomNumber);
+        games++;
+        $("#gameTotal").text(games);        
+        console.log("Games Played " + games)
+        
           });//end of random number
     });//end of Number to Guess
      
- //-------------------------------------------------------------------------//    
-    //add code here to limit the number of games to 3.  
- 
+
+    $("#win").text(wins), function() {
+        alert("You Win!");
+        wins++;
+    } 
+
+    $("#lose").text(losses), function() {
+        alert("You Lose!");
+        losses++;
+    } 
+
 
 
  //-------------------------------------------------------------------------//   
-     //STEP 2 -- player guess:  
+     //STEP 2 -- player guesses:  
         //-- on click event to generate player pick
+       
+    $("diamonds").on("click", function() {
+        var diamond = Math.floor(Math.random() * 24+1);
+        console.log("diamond guess " + diamond);
+        
+        $("#guessValueTotal").text(guessValue) {
+            guessValueTotal = (guessValue + diamond); 
+            console.log("Guess Value Total " + guessValueTotal);            
+            };
+      
 
-//    $("#player-guess").on("click", function() {
-  //      alert("you clicked a crystal!")
-    //})    
+        guesses++;
+        guessTotal = (guessTotal + guesses);
+        console.log("Guess Total " + guessTotal);
+            
+        //include wins and loses
+            for (diamond == randomNumber) {
+                    win();
+            }
+            else if (diamond) {
+                lose(); 
+            }
+        });
 
+});
+    
+     
+    
+
+
+   //  $("#guess1").text(Math.floor(Math.random() * 100)); {     
+      //   var button1 = Math.floor(Math.random() * 100); 
+     //    console.log(guess1);
+     //}; //end of random number
+
+     //$("#player-total").on("click", function () {
+      //   playerGuessTotal = bt1+bt2+btn3+btn4
+    // }
 
         //-- click btn1, 2, 3, 4
         //-- connect btn to image
@@ -92,4 +153,4 @@ $(document).ready(function () {
 
     //STEP 6 -- If Lose
 
-});//end of script
+//});//end of script
