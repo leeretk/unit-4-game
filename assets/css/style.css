@@ -8,7 +8,6 @@ img {
 
 header {  
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  text-align: center;
     }
 
 h1 {
@@ -18,26 +17,25 @@ h1 {
       background-color: grey;
     }
 
-h2 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: darkblue;
-  background-color: lightgray;
-  max-width: 600px;
-  align-content: center;
-} 
-
 h3 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 10px 0;
   color: white;
 }
 
+h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: darkblue;
+  background-color: lightgray;
+  max-width: 400px;
+  } 
+
 p {
   font-size: 80px;
   font-weight: bolder;
   color: darkblue;
   background-color: lightgray;
-  max-width: 600px;
+  max-width: 400px;
 }
 
 /************BUTTON DEFINITIONS ******************/
@@ -49,33 +47,30 @@ button:hover {
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  background: white;
  }
 
 /************ MY COUNTS ******************/
 .myTotals li {
   list-style: none;
   font-size: 20px;
+  font-weight: bolder;
   display: inline-block;
   padding: 10px;
-  background-color: gray;
+  background-color: lightgray;
+  margin: 10px;
+  
 }
 
 .myTotals ul {
   list-style: none;
   padding: 10px;
-  background-color: gray;
-  margin: 10px;
+  background-color: lightgray;
 }
 
-@media (max-width: 200px) {
+
+@media (max-width: 400px) {
   .myTotals li {
-    padding: 25px;}
-}
-
-@media (max-width: 200px) {
-  .myTotals ul {
-    padding: 25px;}
+    padding: 20px;}
 }
 
 @media (max-width: 991.98px) {
@@ -85,11 +80,6 @@ button:hover {
 
 @media (max-width: 991.98px) {
   .header {
-    padding: 25px;}
-};
-
-@media (max-width: 991.98px) {
-  .h2 {
     padding: 25px;}
 };
 

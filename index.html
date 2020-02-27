@@ -13,58 +13,41 @@
 
 <!-- CLASS (BOOSTRAP and ) vs. ID -->
 
-<header>
+<header> 
 
   <!-- HEADER -->
   <div class="jumbotron">
     <h1 class="text-center">Crystals</h1>
   </div>
-
-
-<body> 
-
-  <!-- GAME TOTALS -->
-  </div>
-
-  <ul class="myTotals ul list-group-horizontal">
-    <li>
-      Wins:
-      <span class="rounded-circle" id='win'></span>
-    </li>
-    <li >
-      Losses:
-      <span class="rounded-circle" id="lose"></span>
-    </li>
-    <li >
-     Guesses Remaining:
-      <span class="rounded-circle" id="#"></span>
-    </li>
-    <li>
-      Your Guesses:
-      <span class="rounded-circle" id="totalGuesses"></span>
-    </li>
-    <li>
-      Guess Value:
-      <span class="rounded-circle" id="guessValueTotal"></span>
-    </li>
-    <li >
-      Games Played:
-      <span class="rounded-circle" id="gamesPlayed"></span>
-    </li>
-  </ul>
-
-
-  
-</div>
 </header>
 
 <body class="text-center">
-  <!-- RANDOM NUMBER -->
-  <div>
-    <h2>Number to Guess:</h2>
-    <p id="numberChosen"></p>
-  </div>
 
+    <!-- GAME TOTALS -->
+        <ul class="myTotals ul">
+          <li>Wins:<span id='win'></span></li>
+          <li>Losses:<span id="lose"></span>
+          </li>
+          <li>Guesses Remaining: <span  id="#"></span>
+          </li>
+          <li>Your Guesses:
+            <span  id="totalGuesses"></span>
+          </li>
+          <li>
+            Guess Value:
+            <span id="guessValueTotal"></span>
+          </li>
+          <li>
+            Games Played:
+            <span id="gamesPlayed"></span>
+          </li>
+        </ul>   
+
+
+  <!-- RANDOM NUMBER -->
+     <h2 class="container">Number to Guess:</h2>
+    <p class="container" id="numberChosen"></p>
+       
 
   <!-- GAME BUTTONS -->
   <button type="button" id="diamonds" class="btn btn-primary btn-sm activ">
@@ -93,8 +76,8 @@
       <h3>Play Again</h3>
     </button>
   </div>
-  <script type="text/javascript" src="assets/javascript/game.js"> </script>
 
+  <script type="text/javascript" src="assets/javascript/game.js"> </script>
 
 </body>
 
