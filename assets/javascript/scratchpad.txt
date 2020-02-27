@@ -208,3 +208,30 @@ else if (guessValueTotal == numberChosen) {
    alert("The guessValueTotal total is: " + guessValueTotal);
    console.log(guessValueTotal);
 }
+
+
+
+@media (max-width: 400px) {
+  .myTotals li {
+    padding: 20px;}
+}
+
+@media (max-width: 991.98px) {
+  .body {
+  padding: 25px;}
+};
+
+@media (max-width: 991.98px) {
+  .header {
+    padding: 25px;}
+};
+
+@media (max-width: 991.98px) {
+  .head {
+    padding: 25px;}
+};
+
+@media (width: 100px) {
+  .card { 
+    padding: 25px;}
+}
