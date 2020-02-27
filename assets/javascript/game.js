@@ -56,8 +56,6 @@ $(document).ready(function () {
         console.log("Games Played " + games)
 
     });//end of random number
-});//end of Number to Guess
-
 
 //-------------------------------------------------------------------------//      
 //STEP 2 -- create functions for wins, losses, Guess Totals
@@ -112,6 +110,7 @@ $("#diamonds").on("click", function rest() {
     console.log("Diamond Guess :" + diamond);
     diamond++;
     $("#diamondValue").text(diamond);
+
 });//end of DIAMONDS function
 
 //-- on click event to generate RUBIES value
@@ -140,10 +139,28 @@ $("#saphires").on("click", function rest() {
     saphire++;
     $("#saphireValue").text(saphire);
 });//end of AMETHYSTS function
+});
+///////// this is where I am stuck ////////////////////
 
 // function for winnder and loser
 
+//$("#evaluate").on("click", function {
 
+    //include wins and loses
+  //  if (guessValueTotal <= numberChosen) {
+        //win();
+        // if win then done
+        
+    //    alert("The guessValueTotal total is: " + guessValueTotal);
+      //  guessValueTotal();
+     //}
+
+    //else if (guessValueTotal <= numberChosen) {
+     //  lose(); 
+       // if lose then done
+       // if guesses left then not done.
+       //alert("The guessValueTotal total is: " + guessValueTotal);
+    //} }
 
     // function reset() {
     //  guessesRemaining = 13;
