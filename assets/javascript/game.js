@@ -20,11 +20,14 @@ $(document).ready(function () {
     var wins = 0;
     var losses = 0;
     var guesses = 0;
+    var guessesRemaining = 6;
     var guessValue = 0;
     var diamond = 0;
     var ruby = 0;
     var amethyst = 0;
     var saphire = 0;
+
+
 
     //set variables to collect totals    
     $("#win").text(wins);
@@ -53,8 +56,9 @@ $(document).ready(function () {
         $("#numberChosen").text(randomNumber);
         games++;
         $("#gameTotal").text(games);
-        console.log("Games Played " + games)
-
+        console.log("Games Played " + games);
+        guessesRemaining--;
+        console.log("Guesses Remaining " + guessesRemaining)
     });//end of random number
 
 //-------------------------------------------------------------------------//      
@@ -110,7 +114,10 @@ $("#diamonds").on("click", function rest() {
     console.log("Diamond Guess :" + diamond);
     diamond++;
     $("#diamondValue").text(diamond);
-
+    guesses++
+    guessesRemaining--;
+    console.log("Guess Count " + guessesRemaining)
+    console.log("Guesses Remaining " + guessesRemaining)
 });//end of DIAMONDS function
 
 //-- on click event to generate RUBIES value
@@ -120,6 +127,10 @@ $("#rubies").on("click", function rest() {
     console.log("Ruby Guess :" + ruby);
     ruby++;
     $("#rubyValue").text(ruby);
+    guesses++
+    guessesRemaining--;
+    console.log("Guess Count " + guessesRemaining)
+    console.log("Guesses Remaining " + guessesRemaining)
 });//end of RUBIES function
 
 //-- on click event to generate AMETHYSTS value
@@ -129,6 +140,10 @@ $("#amethysts").on("click", function rest() {
     console.log("Amethyst Guess " + amethyst);
     amethyst++;
     $("#amethystValue").text(amethyst);
+    guesses++
+    guessesRemaining--;
+    console.log("Guess Count " + guessesRemaining)
+    console.log("Guesses Remaining " + guessesRemaining)
 });//end of AMETHYSTS function
 
 //-- on click event to generate SAPHIRES value
@@ -138,8 +153,16 @@ $("#saphires").on("click", function rest() {
     console.log("Saphire Guess " + saphire);
     saphire++;
     $("#saphireValue").text(saphire);
+    guesses++
+    guessesRemaining--;
+    console.log("Guess Count " + guessesRemaining)
+    console.log("Guesses Remaining " + guessesRemaining)
 });//end of AMETHYSTS function
 });
+
+
+
+
 ///////// this is where I am stuck ////////////////////
 
 // function for winnder and loser
@@ -162,11 +185,8 @@ $("#saphires").on("click", function rest() {
        //alert("The guessValueTotal total is: " + guessValueTotal);
     //} }
 
-    // function reset() {
-    //  guessesRemaining = 13;
-    //  wrongGuess = [];
-    //  blanksAndCorrect = [];
-    // Game()
+
+
             //-log guess results
                     //player guess = randomNumber --> you win!
                     //player guess <= randomNumber --> guess again!
