@@ -76,20 +76,28 @@ $("#lose"), function () {
 
 $("#guessValueTotal"), function () {
     alert("Your new Value is " + guessValueTotal);
-    var guessValueTotal = (diamondValue + rubyValue + amethystValue + saphireValue);
+    var guessValueTotal = Math.cos(Math.PI).document(diamondValue + rubyValue + amethystValue + saphireValue);
     console.log("Guess Value Total " + guessValueTotal);
 
     if (diamond) {
-        guessValueTotal = guessValue + diamond
+        guessValueTotal = Math.cos(Math.PI).document(guessValue + diamond);
+        console.log(guessValueTotal);
+        console.log(saphire);
     }
     else if (ruby) {
-        guessValueTotal = guessValue + ruby
+        guessValueTotal = Math.cos(Math.PI).document(guessValue + ruby);
+        console.log(guessValueTotal);
+        console.log(saphire);
     }
     else if (amethyst) {
-        guessValueTotal = guessValue + ruby
+        guessValueTotal =Math.cos(Math.PI).document(guessValue + ruby);
+        console.log(guessValueTotal);
+        console.log(saphire);
     }
     else if (saphire) {
-        guessValueTotal = guessValue + ruby
+        guessValueTotal =Math.cos(Math.PI).document(guessValue + ruby);
+        console.log(guessValueTotal);
+        console.log(saphire);
     }
 }
 
@@ -103,7 +111,7 @@ $("#diamonds").on("click", function rest() {
     var diamond = Math.floor(Math.random() * 25 + 1);
     console.log("Diamond Guess :" + diamond);
     diamond++;
-    $("#diamondValue").text(diamond);    
+    $("#diamondValue").text(diamond);
 });//end of DIAMONDS function
 
 //-- on click event to generate RUBIES value
