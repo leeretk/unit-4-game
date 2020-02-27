@@ -76,7 +76,7 @@ $("#lose"), function () {
 
 $("#guessValueTotal"), function () {
     alert("Your new Value is " + guessValueTotal);
-    var guessValueTotal = (diamond + ruby + amethyst + saphire);
+    var guessValueTotal = (diamondValue + rubyValue + amethystValue + saphireValue);
     console.log("Guess Value Total " + guessValueTotal);
 
     if (diamond) {
@@ -101,7 +101,7 @@ $("#guessValueTotal"), function () {
 
 $("#diamonds").on("click", function rest() {
     var diamond = Math.floor(Math.random() * 25 + 1);
-    console.log("Diamond Guess is:" + diamond);
+    console.log("Diamond Guess :" + diamond);
     diamond++;
     $("#diamondValue").text(diamond);    
 });//end of DIAMONDS function
@@ -110,7 +110,7 @@ $("#diamonds").on("click", function rest() {
 
 $("#rubies").on("click", function rest() {
     var ruby = Math.floor(Math.random() * 25 + 1);
-    console.log("Ruby Guess is:" + ruby);
+    console.log("Ruby Guess :" + ruby);
     ruby++;
     $("#rubyValue").text(ruby);
 });//end of RUBIES function
@@ -119,7 +119,7 @@ $("#rubies").on("click", function rest() {
 
 $("#amethysts").on("click", function rest() {
     var amethyst = Math.floor(Math.random() * 25 + 1);
-    console.log("Amethyst Guess is:" + amethyst);
+    console.log("Amethyst Guess " + amethyst);
     amethyst++;
     $("#amethystValue").text(amethyst);
 });//end of AMETHYSTS function
@@ -128,9 +128,9 @@ $("#amethysts").on("click", function rest() {
 
 $("#saphires").on("click", function rest() {
     var saphire = Math.floor(Math.random() * 25 + 1);
-    console.log("Amethyst Guess is:" + saphire);
+    console.log("Saphire Guess " + saphire);
     saphire++;
-    $("#amethystValue").text(saphire);
+    $("#saphireValue").text(saphire);
 });//end of AMETHYSTS function
 
 // function for winnder and loser
