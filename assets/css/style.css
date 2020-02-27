@@ -8,8 +8,6 @@ img {
 
 header {  
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  padding-top: 50px;
-  padding-bottom: 50px;
   text-align: center;
     }
 
@@ -22,8 +20,10 @@ h1 {
 
 h2 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: white;
-  background-color: blue;
+  color: darkblue;
+  background-color: lightgray;
+  max-width: 600px;
+  align-content: center;
 } 
 
 h3 {
@@ -33,9 +33,12 @@ h3 {
 }
 
 p {
-  font-size: 30px;
-  font-weight: normal;
-  color: blue;
+  font-size: 80px;
+  font-weight: bolder;
+  color: darkblue;
+  background-color: lightgray;
+  max-width: 600px;
+  float: center;
   }
 
 
@@ -45,9 +48,9 @@ button {
 }
 
 button:hover {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   background: white;
  }
 
@@ -55,38 +58,49 @@ button:hover {
 .myTotals li {
   list-style: none;
   font-size: 20px;
-  text-align: center;
   display: inline-block;
   padding: 10px;
   background-color: gray;
 }
 
+.myTotals ul {
+  list-style: none;
+  padding: 10px;
+  background-color: gray;
+  margin: 10px;
+}
+
 @media (max-width: 200px) {
   .myTotals li {
-  padding: 0 0 0 25px;}
+    padding: 25px;}
+}
+
+@media (max-width: 200px) {
+  .myTotals ul {
+    padding: 25px;}
 }
 
 @media (max-width: 991.98px) {
   .body {
-  padding: 0 0 0 25px;}
+  padding: 25px;}
 };
 
 @media (max-width: 991.98px) {
   .header {
-  padding: 0 0 0 25px;}
+    padding: 25px;}
 };
 
 @media (max-width: 991.98px) {
   .h2 {
-  padding: 0 0 0 25px;}
+    padding: 25px;}
 };
 
 @media (max-width: 991.98px) {
   .head {
-  padding: 0 0 0 25px;}
+    padding: 25px;}
 };
 
 @media (width: 100px) {
   .card { 
-    padding: 0 0 0 25px;}
+    padding: 25px;}
 }

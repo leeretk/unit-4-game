@@ -23,28 +23,41 @@
   <!-- GAME TOTALS -->
   </div>
 
-  <ul class="list-group list-group-horizontal-sm">
-    
-    <li class="list-group-item" id="win"> Wins: </li>
-
-    <li class="list-group-item" id="lose">Losses:</li>
-
-    <li class="list-group-item" id="#"> Guesses Left: </li>
-
-    <li class="list-group-item" id="totalGuesses">Your Guesses:</li>
-
-    <li class="list-group-item" id="gamesPlayed">Games Played:</li>
-  
-    <li class="list-group-item" id="guessValueTotal" >Guess Value:</li>
-
+  <ul class="myTotals ul list-group-horizontal">
+    <li class="list-group-item">
+      Wins:
+      <span class="rounded-circle" id='win'></span>
+    </li>
+    <li class="list-group-item">
+      Losses:
+      <span class="rounded-circle" id="lose"></span>
+    </li>
+    <li class="list-group-item">
+     Guesses Remaining:
+      <span class="rounded-circle" id="#"></span>
+    </li>
+    <li class="list-group-item">
+      Your Guesses:
+      <span class="rounded-circle" id="totalGuesses"></span>
+    </li>
+    <li class="list-group-item">
+      Guess Value:
+      <span class="rounded-circle" id="guessValueTotal"></span>
+    </li>
+    <li class="list-group-item">
+      Games Played:
+      <span class="rounded-circle" id="gamesPlayed"></span>
+    </li>
   </ul>
+
+
   
 </div>
 </header>
 
 <body class="text-center">
   <!-- RANDOM NUMBER -->
-  <div>
+  <div class="jumbotron">
     <h2>Number to Guess:</h2>
     <p id="numberChosen"></p>
   </div>
