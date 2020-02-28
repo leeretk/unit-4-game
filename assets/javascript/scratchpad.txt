@@ -235,3 +235,25 @@ else if (guessValueTotal == numberChosen) {
   .card { 
     padding: 25px;}
 }
+
+    if (diamond) {
+        guessValueTotal = Math.cos(Math.PI).document(guessValue + diamond);
+        console.log(guessValueTotal);
+        console.log(saphire);
+    }
+    else if (ruby) {
+        guessValueTotal = Math.cos(Math.PI).document(guessValue + ruby);
+        console.log(guessValueTotal);
+        console.log(saphire);
+    }
+    else if (amethyst) {
+        guessValueTotal =Math.cos(Math.PI).document(guessValue + ruby);
+        console.log(guessValueTotal);
+        console.log(saphire);
+    }
+    else if (saphire) {
+        guessValueTotal =Math.cos(Math.PI).document(guessValue + ruby);
+        console.log(guessValueTotal);
+        console.log(saphire);
+    }
+}
