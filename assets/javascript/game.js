@@ -20,13 +20,12 @@ $(document).ready(function () {
     //setup variable random number for between 25 and 100
     var randomNumber = Math.floor(Math.random() * 25 + 75);
 
-
     //setup variable for scoring
     var games = 0;
     var wins = 0;
     var losses = 0;
-    var guesses = 5;
-    var guessesRemaining = 6;
+    var guesses = 0;
+    var guessesRemaining = 5;
     var guessValue = 0;
     var diamond = 0;
     var ruby = 0;
@@ -58,31 +57,32 @@ $(document).ready(function () {
         console.log("Match to this number:" + randomNumber);
         $("#numberChosen").text(randomNumber);
         games++;
+        guessesRemaining--;
         $("#gameTotal").text(games);
         console.log("Games Played " + games);
         console.log("Guesses Remaining " + guessesRemaining);
-    });//end of random number
+     });//end of random number
 
     //-------------------------------------------------------------------------//      
     //STEP 2 -- create functions for wins, losses, Guess Totals
 
-    $("#guessValueTotal"), function () {
-        alert("Your new Value is " + guessValueTotal);
-        var guessValueTotal = (Math.floor(diamondValue + rubyValue + amethystValue + saphireValue));
-        console.log("Guess Value Total " + guessValueTotal);
-    };
-
-
-    // create win and lost
-
     function winOrLose() {
+        var guessValueTotal = (Math.floor(diamond + ruby + amethyst + saphire));
+        console.log("Guess Value Total " + guessValueTotal);
 
+        for (i=0; i < randomNumber; i++) {
+         
         if (guessValueTotal === randomNumber) {
             wins++;
             console.log(wins);
             $("#winner").html("You Win");
-            reset();
         }
+        if (guessValueTotal < randomNumber) {
+            wins++;
+            console.log(wins);
+            $("#guessagain").html("Guess Again");
+            $("#lost").html("Guess Again: " + guessValue);
+         }
         else if (guessValueTotal > randomNumber) {
             losses++;
             console.log(losses);
@@ -91,7 +91,7 @@ $(document).ready(function () {
             alert("You Lose!");
             losses++;
             console.log("loses " + losses);
-            reset();
+            }   
         }
     };
 
@@ -102,7 +102,7 @@ $(document).ready(function () {
 
     //-- on click event to generate DIAMONDS value
 
-    $("#diamonds").on("click", function rest() {
+    $("#diamonds").on("click", function() {
         var diamond = Math.floor(Math.random() * 25 + 1);
         console.log("Diamond Guess :" + diamond);
         diamond++;
@@ -116,7 +116,7 @@ $(document).ready(function () {
 
     //-- on click event to generate RUBIES value
 
-    $("#rubies").on("click", function rest() {
+    $("#rubies").on("click", function() {
         var ruby = parseInt(Math.floor(Math.random() * 25 + 1));
         console.log("Ruby Guess :" + ruby);
         ruby++;
@@ -130,7 +130,7 @@ $(document).ready(function () {
 
     //-- on click event to generate AMETHYSTS value
 
-    $("#amethysts").on("click", function rest() {
+    $("#amethysts").on("click", function() {
         var amethyst = Math.floor(Math.random() * 25 + 1);
         console.log("Amethyst Guess " + amethyst);
         amethyst++;
@@ -144,7 +144,7 @@ $(document).ready(function () {
 
     //-- on click event to generate SAPHIRES value
 
-    $("#saphires").on("click", function rest() {
+    $("#saphires").on("click", function() {
         var saphire = Math.floor(Math.random() * 25 + 1);
         console.log("Saphire Guess " + saphire);
         saphire++;
