@@ -257,3 +257,6 @@ else if (guessValueTotal == numberChosen) {
         console.log(saphire);
     }
 }
+
+
+

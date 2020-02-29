@@ -25,7 +25,7 @@ $(document).ready(function () {
     var wins = 0;
     var losses = 0;
     var guesses = 0;
-    var guessesRemaining = 5;
+    var guessesRemaining = 4;
     var guessValue = 0;
     var diamond = 0;
     var ruby = 0;
@@ -42,8 +42,9 @@ $(document).ready(function () {
     $("#rubyValue").text(ruby);
     $("#amethystValue").text(amethyst);
     $("#saphireValue").text(saphire);
-    $("#guessValueTotal").text(guessValue);
-    ///guesses left///
+    $("#guessValueTotal").Math(sum[diamond + ruby + amethyst + saphire]);
+    $("#guessesRemaining").text(guessesRemaining);
+      ///guesses left///
 
     //-------------------------------------------------------------------------//
     //STEP 1 -- start game:  Trigger Event (ON CLICK) REST the Game 
@@ -53,7 +54,7 @@ $(document).ready(function () {
     //-- log results for game count
 
     $("#start-game").on("click", function reset() {
-        randomNumber = Math.floor(Math.random() * 25 + 75);
+        randomNumber = parseInt(Math.floor(Math.random() * 25 + 75));
         console.log("Match to this number:" + randomNumber);
         $("#numberChosen").text(randomNumber);
         games++;
@@ -71,7 +72,7 @@ $(document).ready(function () {
     //-- on click event to generate DIAMONDS value
 
     $("#diamonds").on("click", function() {
-        var diamond = Math.floor(Math.random() * 25 + 1);
+        var diamond = parseInt(Math.floor(Math.random() * 25 + 1));
         console.log("Diamond Guess :" + diamond);
         diamond++;
         console.log("Diamond Value " + diamond)
@@ -101,7 +102,7 @@ $(document).ready(function () {
     //-- on click event to generate AMETHYSTS value
 
     $("#amethysts").on("click", function() {
-        var amethyst = Math.floor(Math.random() * 25 + 1);
+        var amethyst = parseInt(Math.floor(Math.random() * 25 + 1));
         console.log("Amethyst Guess " + amethyst);
         amethyst++;
         console.log("amethyst value " + amethyst)
@@ -116,7 +117,7 @@ $(document).ready(function () {
     //-- on click event to generate SAPHIRES value
 
     $("#saphires").on("click", function() {
-        var saphire = Math.floor(Math.random() * 25 + 1);
+        var saphire = parseInt(Math.floor(Math.random() * 25 + 1));
         console.log("Saphire Guess " + saphire);
         saphire++;
         console.log("saphire value " + saphire)
@@ -131,7 +132,7 @@ $(document).ready(function () {
     //STEP 2 -- create functions for wins, losses, Guess Totals
 
     function winOrLose() {
-        var guessValueTotal = (Math.floor(diamond + ruby + amethyst + saphire));
+        var guessValueTotal = parseInt(Math.floor(diamond + ruby + amethyst + saphire));
         console.log("Guess Value Total " + guessValueTotal);
 
         for (i=0; i == randomNumber; i++) {
