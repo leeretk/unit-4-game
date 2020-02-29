@@ -63,39 +63,7 @@ $(document).ready(function () {
         console.log("Guesses Remaining " + guessesRemaining);
      });//end of random number
 
-    //-------------------------------------------------------------------------//      
-    //STEP 2 -- create functions for wins, losses, Guess Totals
-
-    function winOrLose() {
-        var guessValueTotal = (Math.floor(diamond + ruby + amethyst + saphire));
-        console.log("Guess Value Total " + guessValueTotal);
-
-        for (i=0; i < randomNumber; i++) {
-         
-        if (guessValueTotal === randomNumber) {
-            wins++;
-            console.log(wins);
-            $("#winner").html("You Win");
-        }
-        if (guessValueTotal < randomNumber) {
-            wins++;
-            console.log(wins);
-            $("#guessagain").html("Guess Again");
-            $("#lost").html("Guess Again: " + guessValue);
-         }
-        else if (guessValueTotal > randomNumber) {
-            losses++;
-            console.log(losses);
-            $("#loser").html("You Lost");
-            $("#lost").html("Lost: " + losses);
-            alert("You Lose!");
-            losses++;
-            console.log("loses " + losses);
-            }   
-        }
-    };
-
-
+    //-------------------------------------------------------------------------/
     //-------------------------------------------------------------------------//   
     //STEP 3 -- player guesses:
 
@@ -106,6 +74,7 @@ $(document).ready(function () {
         var diamond = Math.floor(Math.random() * 25 + 1);
         console.log("Diamond Guess :" + diamond);
         diamond++;
+        console.log("Diamond Value " + diamond)
         $("#diamondValue").text(diamond);
         guesses++;
         console.log("Guess Count " + guesses);
@@ -120,6 +89,7 @@ $(document).ready(function () {
         var ruby = parseInt(Math.floor(Math.random() * 25 + 1));
         console.log("Ruby Guess :" + ruby);
         ruby++;
+        console.log("ruby value " + ruby)
         $("#rubyValue").text(ruby);
         guesses++;
         guessesRemaining--;
@@ -134,6 +104,7 @@ $(document).ready(function () {
         var amethyst = Math.floor(Math.random() * 25 + 1);
         console.log("Amethyst Guess " + amethyst);
         amethyst++;
+        console.log("amethyst value " + amethyst)
         $("#amethystValue").text(amethyst);
         guesses++;
         guessesRemaining--;
@@ -148,6 +119,7 @@ $(document).ready(function () {
         var saphire = Math.floor(Math.random() * 25 + 1);
         console.log("Saphire Guess " + saphire);
         saphire++;
+        console.log("saphire value " + saphire)
         $("#saphireValue").text(saphire);
         guesses++;
         guessesRemaining--;
@@ -155,6 +127,43 @@ $(document).ready(function () {
         console.log("Guesses Remaining " + guessesRemaining);
         winOrLose();
     });//end of SAPHIRE function
+
+    //STEP 2 -- create functions for wins, losses, Guess Totals
+
+    function winOrLose() {
+        var guessValueTotal = (Math.floor(diamond + ruby + amethyst + saphire));
+        console.log("Guess Value Total " + guessValueTotal);
+
+        for (i=0; i == randomNumber; i++) {
+         
+            if (guessValueTotal < randomNumber) {
+                guesses--;
+                console.log("Number of Guesses: " + guesses);
+                console.log("Number of Guesses Remaining" + guessesRemaining)
+                $("#guessagain").html("Guess Again");
+                $("#lost").html("Guess Again: " + guessValue);
+                reset();
+             }
+
+        else if (guessValueTotal === randomNumber) {
+            wins++;
+            console.log("Number of wins: " + wins);
+            $("#winner").html("You Win");
+            reset();
+        }
+
+        else if (guessValueTotal > randomNumber) {
+            losses++;
+            console.log("Number of Losses: " + losses);
+            $("#loser").html("You Lost");
+            $("#lost").html("Lost: " + losses);
+            alert("You Lose!");
+            losses++;
+            console.log("loses " + losses);
+            reset();
+            }   
+        }
+    };
 
 
 
