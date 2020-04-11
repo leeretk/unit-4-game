@@ -171,3 +171,16 @@ $(document).ready(function () {
 });
 
 ;
+
+function add() {
+    // Create an array from the functions arguments object
+    // then sum the array members using reduce
+    var sum = Array.from(arguments).reduce(function(a, b) {
+      return a + b;
+    });
+    console.log(sum);
+  }
+  // You can now add as many numbers as you like
+  // just by passing them to the function
+  add(2, 5);
+  add(2, 3, 5);
